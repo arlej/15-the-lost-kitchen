@@ -1,0 +1,109 @@
+
+header{
+    background: #F8F6F3;
+    position: sticky;
+    z-index: 3;
+    top:0;
+    transition: opacity 0.5s ease;
+}
+// header:hover .scroll-header{
+//     opacity: 0; 
+// }
+
+
+.wrapper-header{
+    margin:0px auto 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 100px;
+}
+
+.main-nav-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:calc(100% - 60px);
+
+    .logo{
+        width: 300px;
+        margin:auto;
+        padding: 0px 25px 20px;
+        @media screen and (min-width:960px) {
+            width:600px;
+        }
+    }
+
+    .main-nav{
+        display: none;
+        margin:5px 0px;
+        @media screen and (min-width:960px) {
+            display: block;
+        }
+    }
+
+    // #region🔸 NAV
+    nav{
+        font-size: 15px;
+        ul{
+            display:flex;
+            justify-content:center;
+            padding-inline-start: 0px;
+
+            li {display:inline-block;}
+        }
+        a{
+            text-decoration:none;
+            text-transform:uppercase;
+            padding:10px;
+            background:#F8F6F3;
+            color:#000;
+            display:inline-block;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+    .nav-drop{
+        position:relative;
+    }
+    .subnav{
+        position:absolute;
+        left:0;
+        padding:0;
+        flex-direction:column;
+        display:none;
+
+        a{
+            white-space:nowrap;
+            width: 100%;
+        }
+    }
+
+    .nav-drop:hover .subnav{
+        display:flex;
+    }
+    // #endregion
+
+}
+
+
+
+.burger-menu{
+    display: block;
+    @media screen and (min-width:960px) {
+        display: none;
+    }
+}
+.search, .basket{
+    height:26px;
+    @media screen and (min-width:960px) {
+        align-self: flex-end;
+        margin-bottom:10px;
+    }
+}
+.search{
+    @media screen and (min-width:960px) {
+        order:-1;
+    }
+}

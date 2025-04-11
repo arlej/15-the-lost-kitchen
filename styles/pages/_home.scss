@@ -1,0 +1,225 @@
+//  responsive 765 : logo nav smaller + burger
+// 690 : - burger + menu visible
+
+// HERO-VID
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+
+    &-video{
+    position: relative;
+    width: 100%;
+    height:490px;
+    overflow: hidden;
+    
+        &::before{
+            content:"";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: rgba(0,0,0, 0.15);
+            z-index: -1;
+        }
+        &-vid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+    }
+}
+
+// CARDS-BIG
+.cards-big{
+    display: flex;
+    justify-content: space-between;
+    gap:1.5rem;
+    
+    @media screen and (max-width:960px) {
+            flex-direction: column;
+        }
+
+    & a{
+    display: block;
+    }
+
+    .card-big{
+        position: relative;
+        background-position: center;
+        background-size:cover;
+        display: block;
+        width: 100%;
+        height: 660px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+        padding: 0px 40px;
+        @media screen and (max-width:960px) {
+            height: 380px;
+        }
+        
+        &-first{
+            background-image: url('./../img/TLK031220251389.jpg');
+        }
+        &-second{
+            background-image: url('./../img/Newsletter_G4.jpg');
+        }
+        &-title{
+            z-index: 1;
+
+            & h2{
+            font-size: 2.5rem;
+            font-weight: bold;
+            }
+            & p{
+                font-size: 1.5rem;
+                font-family: "Cormorant Garamond", serif;
+                text-transform: none;
+            }
+        }
+        &::before{
+            content:"";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: rgba(0,0,0, 0.20);
+        }
+    }
+    
+}
+
+// #region JOIN
+.wrapper-banner-join{
+    background-color: #ebebe7;
+    padding:20px;
+}
+.banner-join{
+    border: solid 1px #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 40px 60px;
+
+    @media screen and (max-width:960px) {
+        flex-direction: column;
+    }
+
+}
+.join{
+    width:calc(100% / 2);
+
+        @media screen and (max-width:960px) {
+            width:100%;
+        }
+
+    &-left h2{
+        width:50%;
+
+        @media screen and (max-width:960px) {
+            width:100%;
+        }
+
+    }
+    &-right {
+        & h2{
+            font-size: 2.5rem;
+            }
+        & > p{
+                margin-bottom:40px;
+            }
+        }
+}
+// #endregion
+
+
+// #region SPRING
+.spring{
+    
+    & h2{
+        font-size: 2.5rem;
+    }
+}
+.cards-by-four{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    margin-top:20px;
+}
+.card-by-four-tall{
+    position: relative;
+    color:#fff;
+
+    &:before{
+        position: absolute;
+        content:"Table";
+        top:93%;
+        left:5%;
+        width: 90%;
+        font-family: "Cormorant Garamond", serif;
+        z-index: 2;
+    }
+    &:after{
+        position: absolute;
+        content:"";
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0, 0.20);
+    }
+}
+// #endregion
+
+
+.hero-middle img{
+    width: 100%;
+    height: 100%;
+    background-position: bottom;
+    background-size:cover;
+}
+
+// #region CARDS-BY-FOUR-SQUARE
+.spring-by-four .link{
+    border-bottom:0px;
+    text-decoration: underline;
+}
+.cards-by-four-square{
+    grid-template-columns: repeat(2, 1fr);
+    @media screen and (min-width:720px){
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.hero-newsletter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:80px;
+    height:370px;
+    background-position: center;
+    background-size:cover;
+    background-image: url('./../img/Newsletter_G3.jpg');
+}
+.newsletter{
+    max-width:450px;
+
+    &-form{
+        margin-top:30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media screen and (min-width:720px){
+            flex-direction: row;
+        }
+    }
+}
+
+// #endregion
+
+
